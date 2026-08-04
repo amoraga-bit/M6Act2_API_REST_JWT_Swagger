@@ -10,7 +10,7 @@ const options = {
     },
     servers: [
       { url: 'http://localhost:3000', description: 'Local' },
-      { url: 'https://la-APP-queaunnotengo-pero-configurare.up.railway.app', description: 'Producción' }
+      { url: 'https://m6act2apirestjwtswagger-production.up.railway.app', description: 'Producción' }
     ],
     components: {
       securitySchemes: {
