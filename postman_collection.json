@@ -1,0 +1,495 @@
+{
+  "info": {
+    "_postman_id": "95d582cb-0354-4f54-8ba7-b074818bbc06",
+    "name": "M6Act2 - API Reservaciones",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57111313"
+  },
+  "item": [
+    {
+      "name": "Auth - Register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n     \"nombre\": \"Ana Torres\",\r\n     \"email\": \"ana.torres@example.com\",\r\n     \"password\": \"MiPassword123!\"\r\n   }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Auth - Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n     \"email\": \"ana.torres@example.com\",\r\n     \"password\": \"MiPassword123!\"\r\n   }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Auth - Perfil",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sIjoiY2xpZW50ZSIsImlhdCI6MTc4NTgxMzg5OSwiZXhwIjoxNzg2NDE4Njk5fQ.cgwajY2DA1fTkPPU3T5WVabFENzI1wI0duIaVnnESr4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/auth/perfil",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "auth",
+            "perfil"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Auth - Login - Adm",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n     \"email\": \"ana.torres@example.com\",\r\n     \"password\": \"MiPassword123!\"\r\n   }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Auth - Register (Admin)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n     \"nombre\": \"Amilcar Admin\",\r\n     \"email\": \"amilcar.admin@example.com\",\r\n     \"password\": \"AdminSeguro123!\"\r\n   }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Auth - Login (Admin)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n     \"email\": \"amilcar.admin@example.com\",\r\n     \"password\": \"AdminSeguro123!\"\r\n   }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Mesas - Crear (admin)",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sIjoiYWRtaW4iLCJpYXQiOjE3ODU4MTQ3MTMsImV4cCI6MTc4NjQxOTUxM30.sEfmpKJttCTEbj-mLGeegigPs0GSgd7-kKNvqe89p78",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n     \"numero\": 8,\r\n     \"capacidad\": 4,\r\n     \"ubicacion\": \"Terraza\"\r\n   }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/mesas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "mesas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Mesas - Detalle",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/mesas/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "mesas",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Mesas - Actualizar (admin)",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sIjoiYWRtaW4iLCJpYXQiOjE3ODU4MTQ3MTMsImV4cCI6MTc4NjQxOTUxM30.sEfmpKJttCTEbj-mLGeegigPs0GSgd7-kKNvqe89p78",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n     \"capacidad\": 6,\r\n     \"ubicacion\": \"Salón privado\"\r\n   }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/mesas/8",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "mesas",
+            "8"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Mesas - Desactivar (admin)",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sIjoiYWRtaW4iLCJpYXQiOjE3ODU4MTQ3MTMsImV4cCI6MTc4NjQxOTUxM30.sEfmpKJttCTEbj-mLGeegigPs0GSgd7-kKNvqe89p78",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/mesas/8",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "mesas",
+            "8"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Reservaciones - Crear (cliente)",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sIjoiY2xpZW50ZSIsImlhdCI6MTc4NTgxMzg5OSwiZXhwIjoxNzg2NDE4Njk5fQ.cgwajY2DA1fTkPPU3T5WVabFENzI1wI0duIaVnnESr4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n     \"mesa_id\": 2,\r\n     \"fecha\": \"2026-08-15\",\r\n     \"hora\": \"20:00\",\r\n     \"num_comensales\": 3\r\n   }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/reservaciones",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "reservaciones"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Reservaciones - Mis (cliente)",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sIjoiY2xpZW50ZSIsImlhdCI6MTc4NTgxMzg5OSwiZXhwIjoxNzg2NDE4Njk5fQ.cgwajY2DA1fTkPPU3T5WVabFENzI1wI0duIaVnnESr4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/reservaciones/mis",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "reservaciones",
+            "mis"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Reservaciones - Listar todas (admin)",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sIjoiYWRtaW4iLCJpYXQiOjE3ODU4MTQ3MTMsImV4cCI6MTc4NjQxOTUxM30.sEfmpKJttCTEbj-mLGeegigPs0GSgd7-kKNvqe89p78",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/reservaciones",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "reservaciones"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Reservaciones - Cambiar estado (admin)",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sIjoiYWRtaW4iLCJpYXQiOjE3ODU4MTQ3MTMsImV4cCI6MTc4NjQxOTUxM30.sEfmpKJttCTEbj-mLGeegigPs0GSgd7-kKNvqe89p78",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n     \"estado\": \"confirmada\"\r\n   }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/reservaciones/4/estado",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "reservaciones",
+            "4",
+            "estado"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Reservaciones - Cancelar propia (cliente)",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sIjoiY2xpZW50ZSIsImlhdCI6MTc4NTgxMzg5OSwiZXhwIjoxNzg2NDE4Njk5fQ.cgwajY2DA1fTkPPU3T5WVabFENzI1wI0duIaVnnESr4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/reservaciones/4",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "reservaciones",
+            "4"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
